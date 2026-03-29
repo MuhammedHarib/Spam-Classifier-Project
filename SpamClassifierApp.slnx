@@ -1,0 +1,9 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+  </Configurations>
+  <Project Path="SpamClassifierApp/SpamClassifierApp.csproj" Id="fd80d98e-a279-4c3a-9cb5-2a3297d5ebc7">
+    <Platform Solution="*|x64" Project="x64" />
+  </Project>
+</Solution>
