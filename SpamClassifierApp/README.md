@@ -88,24 +88,21 @@ Messages are labeled as:
 
 * `0` → Ham (Not Spam)
 * `1` → Spam
+## 📊 Model Performance & Demo
+
+To verify the classifier's reliability, the model was evaluated against a test dataset, achieving high precision in distinguishing between legitimate and malicious intent.
+
+### 📈 Model Accuracy
+![Model Accuracy](./images/model_accuracy.png)
+*The training results showing the accuracy and loss metrics of the ML.NET SDCA trainer.*
 
 ---
 
-## 📸 Screenshots
-
-### 🖥️ WinForms UI
-
-(Add screenshot here)
-
-### 🐳 Docker Build
-
-(Add screenshot here)
-
-### ▶️ Docker Run Output
-
-(Add screenshot here)
-
----
+### 🧪 Live Classification Examples
+| 🚩 Spam Detection | ✅ Ham (Legitimate) |
+| :--- | :--- |
+| ![Spam Message](./images/spam_message.png) | ![Ham Message](./images/ham_message.png) |
+| *Example of a high-confidence spam alert.* | *Example of a clean, personal message.* |---
 
 ## ✅ Conclusion
 
