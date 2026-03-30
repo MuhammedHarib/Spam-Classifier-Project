@@ -154,13 +154,18 @@ RUN dotnet build
 # Run the application
 CMD ["dotnet", "run"]
 
+## 👨‍💻 Developer
 
+| | |
+|---|---|
+| **Name** | Muhammad Harib |
+| **Roll No** | 232201069|
+| **Institute** | Khan Institute of Computer Science and IT |
+| **Department** | Computer Science |
+| **Submitted To** | Sir Uzair Hassan |
 
+---
 
+## 📜 License
 
-|                |                                  |
-| -------------- | -------------------------------- |
-| **Name**       | Harib                            |
-| **Course**     | AI-Based Application Development |
-| **Technology** | .NET + ML.NET                    |
-| **Instructor** |  Sir Uzair              |
+This project is developed for academic purposes as part of an AI-Based Application Development assignment.
