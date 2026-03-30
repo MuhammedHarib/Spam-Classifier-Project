@@ -110,7 +110,8 @@ Spam messages are a major issue in communication systems. Manually filtering the
 3. Run the project  
 
 
-Ctrl + F5
+   Ctrl + F5
+```bash
 
 📁 Project StructurePlaintextSpamSense/
 │
@@ -135,6 +136,8 @@ Ctrl + F5
 ├── Dockerfile
 ├── README.md
 └── .gitignore
+```
+
 🐳 DockerDockerfile# Use official .NET SDK image as base
 FROM [mcr.microsoft.com/dotnet/sdk:7.0](https://mcr.microsoft.com/dotnet/sdk:7.0)
 
@@ -149,5 +152,13 @@ RUN dotnet build
 
 # Run the application
 CMD ["dotnet", "run"]
-👨‍💻 DeveloperNameMuhammad HaribRoll No232201069InstituteKhan Institute of Computer Science and ITDepartmentComputer ScienceSubmitted ToSir Uzair Hassan
 
+## 👨‍💻 Developer
+
+|                |                                      |
+|----------------|--------------------------------------|
+| **Name**       | Muhammad Harib                       |
+| **Roll No**    | 232201069                            |
+| **Institute**  | Khan Institute of Computer Science and IT |
+| **Department**| Computer Science                     |
+| **Submitted To** | Sir Uzair Hassan                  |
