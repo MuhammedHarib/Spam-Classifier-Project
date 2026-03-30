@@ -1,47 +1,166 @@
 # 📧 Spam Sense: ML-Powered Message Classifier
 
-[![.NET 7.0](https://img.shields.io/badge/.NET-7.0-blue.svg)](https://dotnet.microsoft.com/)
-[![ML.NET](https://img.shields.io/badge/ML.NET-Machine%20Learning-orange.svg)](https://dotnet.microsoft.com/apps/machinelearning-ai/ml-dotnet)
-[![Docker](https://img.shields.io/badge/Docker-Container-blue.svg)](https://www.docker.com/)
+<div align="center">
 
-A professional-grade **C# .NET** desktop application that leverages **ML.NET** to identify spam with high accuracy. This project demonstrates the integration of machine learning within a **WinForms** GUI and showcases containerization patterns using **Docker**.
+![.NET](https://img.shields.io/badge/.NET-7.0-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
+![ML.NET](https://img.shields.io/badge/ML.NET-Machine%20Learning-orange?style=for-the-badge&logo=microsoft)
+![Windows Forms](https://img.shields.io/badge/Windows_Forms-WinForms-0078D4?style=for-the-badge&logo=windows)
+![Docker](https://img.shields.io/badge/Docker-Container-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 
----
-
-## 📌 Project Description
-This project is a high-performance **Spam Message Classifier**. By using a trained binary classification model, the application can distinguish between legitimate messages (**Ham**) and unwanted commercial or malicious messages (**Spam**).
-
-### 🚀 Key Features
-* **Real-time Prediction:** Instant classification of text input.
-* **On-the-Fly Training:** Retrain the model directly from the UI using the latest datasets.
-* **Binary Classification:** Optimized using the SDCA (Stochastic Dual Coordinate Ascent) algorithm.
-* **Dockerized Workflow:** Ready for CI/CD environments to demonstrate build consistency.
+**AI-Powered Spam Detection Desktop Application**  
+Built with C# · .NET 7 · ML.NET · WinForms
 
 ---
 
-## 🧠 Technologies Used
-* **C# (.NET 7.0)**: Core programming language.
-* **ML.NET**: Open-source machine learning framework for .NET.
-* **WinForms**: Desktop graphical user interface.
-* **Docker**: For containerized build and execution testing.
+*Classifies messages as Spam or Ham with real-time predictions*  
+*Demonstrates Machine Learning integration in .NET applications*
+
+</div>
 
 ---
 
-## ⚙️ Setup & Installation
+## 📋 Table of Contents
 
-### 1. Run the WinForms Application (Windows)
-1.  Open the solution file (`.sln`) in **Visual Studio 2022**.
-2.  Restore NuGet packages via the **Package Manager Console**.
-3.  Press `Ctrl + F5` to run the project.
-4.  Click **"Train Model"** to generate the `.zip` model file.
-5.  Enter a message and click **"Predict"** to see the result.
+- [📌 About the Project](#-about-the-project)
+- [✨ Features](#-features)
+- [📸 Screenshots](#-screenshots)
+- [🛠️ Tech Stack](#-tech-stack)
+- [📊 Dataset](#-dataset)
+- [🚀 Setup Instructions](#-setup-instructions)
+- [📖 How to Use](#-how-to-use)
+- [📁 Project Structure](#-project-structure)
+- [🐳 Docker](#-docker)
+- [👨‍💻 Developer](#-developer)
 
-### 2. Docker Setup (Build Demo)
-> **Note:** Because WinForms requires a Windows GUI subsystem, Docker is used here to demonstrate the **build process** and **headless execution** of the ML logic.
+---
+
+## 📌 About the Project
+
+**Spam Sense** is an AI-based desktop application that classifies text messages into:
+
+- ✅ **Ham (Legitimate Message)**
+- ❌ **Spam (Unwanted / Malicious Message)**
+
+The application uses **ML.NET binary classification** to detect spam in real-time.
+
+### 🎯 Problem Statement
+Spam messages are a major issue in communication systems. Manually filtering them is inefficient and error-prone.
+
+### 🎯 Objective
+- Build a machine learning model using ML.NET  
+- Integrate AI into a WinForms application  
+- Provide real-time spam detection  
+- Demonstrate Docker-based build process  
+
+---
+
+## ✨ Features
+
+| Feature | Description |
+|--------|------------|
+| ⚡ Real-Time Prediction | Instantly classify messages |
+| 🧠 ML.NET Model | Binary classification using SDCA |
+| 🔄 Model Training | Train model from UI |
+| 💻 Desktop UI | Built with Windows Forms |
+| 🐳 Docker Support | Containerized build process |
+| ⚠️ Error Handling | Handles invalid input safely |
+
+---
+
+
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|-----------|--------|
+| **C#** | Programming Language |
+| **.NET 7.0** | Framework |
+| **ML.NET** | Machine Learning |
+| **WinForms** | UI |
+| **Docker** | Containerization |
+
+---
+
+## 📊 Dataset
+
+| Property | Value |
+|--------|------|
+| Type | SMS Spam Dataset |
+| Format | CSV |
+| Labels | Spam / Ham |
+| Usage | Training ML Model |
+
+---
+
+## 🚀 Setup Instructions
+
+### ✅ Prerequisites
+
+- Visual Studio 2022  
+- .NET 7 SDK  
+- Docker (optional)
+
+---
+
+### ▶️ Run Application
+
+1. Open `.sln` file in Visual Studio  
+2. Restore packages  
+3. Run the project  
 
 ```bash
-# Build the Docker Image
-docker build -t spam-app .
+Ctrl + F5
 
-# Run the Container
-docker run spam-app
+SpamSense/
+│
+├── 📁 Data/
+│   └── spam_dataset.csv
+│
+├── 📁 Models/
+│   ├── InputData.cs
+│   └── Prediction.cs
+│
+├── 📁 Services/
+│   └── MLService.cs
+│
+├── 📁 Forms/
+│   └── MainForm.cs
+│
+├── 📁 screenshots/
+│   └── (Add images here)
+│
+├── Program.cs
+├── SpamSense.csproj
+├── Dockerfile
+├── README.md
+└── .gitignore
+
+
+
+# Use official .NET SDK image as base
+FROM mcr.microsoft.com/dotnet/sdk:7.0
+
+# Set working directory inside container
+WORKDIR /app
+
+# Copy all project files into container
+COPY . .
+
+# Build the application
+RUN dotnet build
+
+# Run the application
+CMD ["dotnet", "run"]
+
+
+
+
+
+|                |                                  |
+| -------------- | -------------------------------- |
+| **Name**       | Harib                            |
+| **Course**     | AI-Based Application Development |
+| **Technology** | .NET + ML.NET                    |
+| **Instructor** | (Your Teacher Name)              |
