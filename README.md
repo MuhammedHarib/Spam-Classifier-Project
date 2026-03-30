@@ -163,4 +163,4 @@ CMD ["dotnet", "run"]
 | **Name**       | Harib                            |
 | **Course**     | AI-Based Application Development |
 | **Technology** | .NET + ML.NET                    |
-| **Instructor** | (Your Teacher Name)              |
+| **Instructor** |  Sir Uzair              |
